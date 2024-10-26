@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats</title>
+    <link href="./favicon.ico" rel="icon" />
+    <link href="./styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="loading_screen">
+        <p>Loading...</p>
+    </div>
+    <div id="disconnected_screen" style="display: none">
+        <p>Disconnected</p>
+    </div>
+    <div id="name_screen" style="display: none">
+        <input id="player_name" type="text" placeholder="Type your name..." />
+        <input id="start_button" type="button" value="Start" />
+    </div>
+    <div id="game_screen" style="display: none">
+        <img id="background" src="./grass.png" />
+        <div id="player">
+            <p id="player_tag">Player</p>
+            <img src="./cat.png" />
+            <img id="player_heart" src="./heart.png" />
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

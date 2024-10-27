@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let touching = false;
         states.forEach(state => {
             const playerDiv = document.getElementById(state.id);
+            if (playerDiv == null) return;
             state.position.x += state.velocity.x * playerSpeed * deltaTime;
             state.position.y += state.velocity.y * playerSpeed * deltaTime;
             const statePosition = {

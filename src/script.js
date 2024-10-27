@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         heightOffset = window.innerHeight / 2;
     });
 
-    const playerSpeed = 100;
+    const playerSpeed = 200;
     const playerPosition = { x: 0, y: 0 };
     const playerVelocity = { x: 0, y: 0 };
     const keyStates = { left: false, right: false, up: false, down: false };
@@ -70,6 +70,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const deltaTime = (timestamp - start) / 1000;
         playerVelocity.x = (keyStates.left === true ? -1 : 0) + (keyStates.right === true ? 1 : 0);
         playerVelocity.y = (keyStates.up === true ? -1 : 0) + (keyStates.down === true ? 1 : 0);
+        const velocityLength = Math.sqrt(playerVelocity.x * playerVelocity.x + playerVelocity.y * playerVelocity.y);
+        if (velocityLength > 1) {
+            playerVelocity.x /= velocityLength;
+            playerVelocity.y /= velocityLength;
+        }
         playerPosition.x += playerVelocity.x * playerSpeed * deltaTime;
         playerPosition.y += playerVelocity.y * playerSpeed * deltaTime;
         if (playerPosition.x < -165) playerPosition.x = -165;

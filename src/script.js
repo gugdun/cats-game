@@ -124,6 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const newPlayer = document.createElement('div');
         newPlayer.id = state.id;
         const newPlayerTag = document.createElement('p');
+        newPlayerTag.id = 'other_player_tag';
         newPlayerTag.innerText = state.username;
         const newPlayerImg = document.createElement('img');
         newPlayerImg.src = require('./cat.png');

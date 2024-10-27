@@ -2,6 +2,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
 body {
@@ -11,12 +15,15 @@ body {
     overflow: hidden;
     align-items: center;
     justify-content: center;
+    background-color: #222;
 }
 
-input {
+#player_name {
     display: block;
-    height: 30px;
+    height: 36px;
     padding-left: 8px;
+    border: none;
+    border-radius: 10px;
 }
 
 #name_screen {
@@ -30,6 +37,20 @@ input {
     margin-top: 16px;
     width: 100px;
     height: 30px;
+    border: none;
+    border-radius: 12px;
+    background-color: #1b5;
+    color: #fff;
+}
+
+#start_button:hover {
+    background-color: #0a4;
+    color: #ddd;
+}
+
+#start_button:active {
+    background-color: #093;
+    color: #bbb;
 }
 
 #player {
@@ -41,6 +62,10 @@ input {
     display: none;
     position: absolute;
     animation: float 1s ease-in-out infinite;
+}
+
+#player_tag {
+    color: #fff;
 }
 
 @keyframes float {

@@ -7,7 +7,7 @@ module.exports = {
   mode: 'production',
   devServer: {
     static: './dist',
-    port: 3000,
+    port: 1337,
   },
   plugins: [
     new HtmlBundlerPlugin({

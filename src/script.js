@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(event);
     };
 
-    startButton.addEventListener('click', function() {
+    function joinGame() {
         if (playerName.value.length === 0) {
             alert('Name can not be empty!');
             return;
@@ -206,5 +206,13 @@ document.addEventListener('DOMContentLoaded', function() {
         gameScreen.style.display = 'block';
         playerTag.innerText = playerName.value;
         requestAnimationFrame(mainLoop);
+    }
+
+    playerName.addEventListener('keypress', function(event) {
+        if (event.code === 'Enter') {
+            joinGame();
+        }
     });
+
+    startButton.addEventListener('click', joinGame);
 });
